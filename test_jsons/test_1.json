@@ -1,0 +1,141 @@
+{
+  "responseId": "fc37cacf-22e3-45a2-8cf7-e21fef9dae06",
+  "queryResult": {
+    "queryText": "spot rofex index",
+    "parameters": {
+      "month": "",
+      "product": "Spot Rofex"
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            ""
+          ]
+        }
+      }
+    ],
+    "outputContexts": [
+      {
+        "name": "projects/xxxxxxxxxx/agent/environments/__aog-9/users/-/sessions/ABwppHEYD_bMzF0WwMuI3q1Cpde0XEsLvS4KBvr2h8X8WO8M8NVcQm6aHc569yHN1CtcnOqDE4PNS6hZTXPN0A/contexts/actions_capability_screen_output",
+        "parameters": {
+          "product": "Rofex Index",
+          "month": "",
+          "product.original": "rofex index",
+          "month.original": ""
+        }
+      },
+      {
+        "name": "projects/xxxxxxxxxxx/agent/environments/__aog-9/users/-/sessions/ABwppHEYD_bMzF0WwMuI3q1Cpde0XEsLvS4KBvr2h8X8WO8M8NVcQm6aHc569yHN1CtcnOqDE4PNS6hZTXPN0A/contexts/actions_capability_audio_output",
+        "parameters": {
+          "product": "Rofex Index",
+          "month": "",
+          "product.original": "rofex index",
+          "month.original": ""
+        }
+      },
+      {
+        "name": "projects/xxxxxxxxxxx/agent/environments/__aog-9/users/-/sessions/ABwppHEYD_bMzF0WwMuI3q1Cpde0XEsLvS4KBvr2h8X8WO8M8NVcQm6aHc569yHN1CtcnOqDE4PNS6hZTXPN0A/contexts/google_assistant_input_type_keyboard",
+        "parameters": {
+          "product": "Rofex Index",
+          "month": "",
+          "product.original": "rofex index",
+          "month.original": ""
+        }
+      },
+      {
+        "name": "projects/xxxxxxxxxxxxx/agent/environments/__aog-9/users/-/sessions/ABwppHEYD_bMzF0WwMuI3q1Cpde0XEsLvS4KBvr2h8X8WO8M8NVcQm6aHc569yHN1CtcnOqDE4PNS6hZTXPN0A/contexts/actions_capability_media_response_audio",
+        "parameters": {
+          "product": "Rofex Index",
+          "month": "",
+          "product.original": "rofex index",
+          "month.original": ""
+        }
+      },
+      {
+        "name": "projects/xxxxxxxxxxxx/agent/environments/__aog-9/users/-/sessions/ABwppHEYD_bMzF0WwMuI3q1Cpde0XEsLvS4KBvr2h8X8WO8M8NVcQm6aHc569yHN1CtcnOqDE4PNS6hZTXPN0A/contexts/actions_capability_web_browser",
+        "parameters": {
+          "product": "Rofex Index",
+          "month": "",
+          "product.original": "rofex index",
+          "month.original": ""
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/xxxxxxxxxxxx/agent/intents/c1b4543f-798c-43d4-b7c0-7e7a09a2f65f",
+      "displayName": "Last Price Intent"
+    },
+    "intentDetectionConfidence": 0.87,
+    "languageCode": "en-us"
+  },
+  "originalDetectIntentRequest": {
+    "source": "google",
+    "version": "2",
+    "payload": {
+      "isInSandbox": true,
+      "surface": {
+        "capabilities": [
+          {
+            "name": "actions.capability.AUDIO_OUTPUT"
+          },
+          {
+            "name": "actions.capability.WEB_BROWSER"
+          },
+          {
+            "name": "actions.capability.MEDIA_RESPONSE_AUDIO"
+          },
+          {
+            "name": "actions.capability.SCREEN_OUTPUT"
+          }
+        ]
+      },
+      "requestTypetappropriate response": "SIMULATOR",
+      "inputs": [
+        {
+          "rawInputs": [
+            {
+              "query": "spot rofex index",
+              "inputType": "KEYBOARD"
+            }
+          ],
+          "arguments": [
+            {
+              "rawText": "spot rofex index",
+              "textValue": "spot rofex index",
+              "name": "text"
+            }
+          ],
+          "intent": "actions.intent.TEXT"
+        }
+      ],
+      "user": {
+        "lastSeen": "2019-02-13T02:34:19Z",
+        "locale": "en-US",
+        "userId": "ABwppHF26MOKYVKDu6THTyhB8rDDSEL5v6v-pgZ2xUohfo3QwTwf9TUD61Ya9cFvyLvsZTLslNuVVMduFZxEYg"
+      },
+      "conversation": {
+        "conversationId": "ABwppHEYD_bMzF0WwMuI3q1Cpde0XEsLvS4KBvr2h8X8WO8M8NVcQm6aHc569yHN1CtcnOqDE4PNS6hZTXPN0A",
+        "type": "ACTIVE",
+        "conversationToken": "[]"
+      },
+      "availableSurfaces": [
+        {
+          "capabilities": [
+            {
+              "name": "actions.capability.AUDIO_OUTPUT"
+            },
+            {
+              "name": "actions.capability.WEB_BROWSER"
+            },
+            {
+              "name": "actions.capability.SCREEN_OUTPUT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "session": "projects/xxxxxxxxxxxxx/agent/environments/__aog-9/users/-/sessions/ABwppHEYD_bMzF0WwMuI3q1Cpde0XEsLvS4KBvr2h8X8WO8M8NVcQm6aHc569yHN1CtcnOqDE4PNS6hZTXPN0A"
+}
