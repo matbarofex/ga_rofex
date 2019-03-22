@@ -12,6 +12,7 @@ class RestClient:
 
     # Endpoints
     endpointRestDemo = "http://demo-api.primary.com.ar/"
+    endpointRestRemarket = "http://http://pbcp-remarket.cloud.primary.com.ar/"
     endpointRestProd = "https://api.primary.com.ar/"
 
     def __init__(self, user, password, entorno, account=0):
@@ -31,16 +32,23 @@ class RestClient:
         elif self.entorno.value is Entorno.PROD.value:
             self.activeEndpoint = RestClient.endpointRestProd
             self.verify_https = True
+        elif self.entorno.value is Entorno.REMARKET.value:
+            self.activeEndpoint = RestClient.endpointRestRemarket
+            self.verify_https = False
         else:
             self.initialized = False
             raise PMYAPIException("Incorrect Environment.")
 
-    def api_request(self, url):
-        if not self.login:
-            raise PMYAPIException("User not Authenticated.")
-        else:
-            headers = {'X-Auth-Token': self.token}
-            try:
+    def api_request(self, url, login=True):
+        try:
+            if not self.islogin:
+                if self.login():
+                    return self.api_request(url, False)
+                else:
+                    raise PMYAPIException("Could not Authenticate.")
+            else:
+                headers = {'X-Auth-Token': self.token}
+
                 logging.debug("Request: " + url)
                 r = requests.get(url, headers=headers, verify=self.verify_https)
                 logging.debug("Response Status: " + str(r.status_code))
@@ -49,8 +57,8 @@ class RestClient:
                     raise PMYAPIException("Token Invalido.")
                 else:
                     return simplejson.loads(r.content)
-            except requests.exceptions.RequestException as e:
-                raise PMYAPIException("Ocurrió un error con el request.", e)
+        except Exception as e:
+            raise PMYAPIException("Ocurrió un error con el request.", e)
 
     def market_data(self, symbol, entries):
         url = self.activeEndpoint + "rest/marketdata/get?marketId={m}&symbol={s}&entries={e}".format(m=self.marketID,s=symbol,e=entries)
